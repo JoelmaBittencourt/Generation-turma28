@@ -7,16 +7,17 @@ public class Produtos {
 	private double preco;
 	private int estoque;
 	private int codigo;
-	
-	//constructor,nao da pra tirar valores indicados no contructor
-	public Produtos( int codigo, String nome, String descricao, double preco, int estoque ) {
-		
+
+	// constructor,nao da pra tirar valores indicados no contructor
+	public Produtos(int codigo, String nome, String descricao, double preco, int estoque) {
+
 		this.nome = nome;
 		this.descricao = descricao;
 		this.preco = preco;
 		this.estoque = estoque;
 		this.codigo = codigo;
 	}
+
 //getter e setter 
 	public String getNome() {
 		return nome;
@@ -57,13 +58,14 @@ public class Produtos {
 	public void setCodigo(int codigo) {
 		this.codigo = codigo;
 	}
+
 	public Produtos() {
 		super();
 	}
-	//criar constructor vazio
-	public void DiminuirEstoque(int venda)	
-	{
-		this.estoque = this.estoque-venda;
+
+	// criar constructor vazio
+	public void DiminuirEstoque(int venda) {
+		this.estoque = this.estoque - venda;
 	}
-	
+
 }

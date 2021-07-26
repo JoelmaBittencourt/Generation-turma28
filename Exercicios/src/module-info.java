@@ -1,3 +1,3 @@
-module Ecommerce {
+module Exercicios {
 	requires java.desktop;
 }
