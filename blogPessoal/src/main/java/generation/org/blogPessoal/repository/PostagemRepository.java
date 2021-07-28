@@ -1,4 +1,4 @@
-package org.generation.blogPessoal.repository;
+package generation.org.blogPessoal.repository;
 
 import java.util.List;
 
