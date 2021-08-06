@@ -1,15 +1,10 @@
 package com.joelma.os.domain;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.persistence.Entity;
-import javax.persistence.OneToMany;
-@Entity//tabela
-public class Tecnico extends Pessoa  implements Serializable{
-private static final long seriaVersionUID=1L;
-@OneToMany(mappedBy = "tecnico" )//muitas ordem um tecnico
+public class Tecnico extends Pessoa {
+
 private List<Os> List=new ArrayList<>();
 	public Tecnico() {
 		super();

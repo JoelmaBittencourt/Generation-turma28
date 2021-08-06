@@ -15,25 +15,21 @@ import com.joelma.os.domain.enuns.Status;
 
 //os importes tem que ser enums
 //atributos
-@Entity
+
 public class Os {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY )
+
 	private Integer id;
-	@JsonFormat(pattern = "dd/MM/yyyy HH:mm")//tipo de data e hora
+
 	private LocalDateTime dataAbertura;
-	@JsonFormat(pattern = "dd/MM/yyyy HH:mm")
+
 	private LocalDateTime dataFechamento;
 	private Integer prioridade;// numero correspondente
 	private String observacoes;
 	private Integer status;// numero correspondente
 	
-	@ManyToMany//muitas ordens para um tecnico
-	@JoinColumn(name="tecnico_id")//cria coluna na db com nome tecnico
+
 	private Tecnico tecnico;// nao precisa importar por estar no mesmo pacote de OrdemServiço
-	
-	@ManyToMany//muitas ordens para um tecnico
-	@JoinColumn(name="cliente_id")//cria coluna na db com nome cliente
+
 	private Cliente cliente;// nao precisa importar tambem
 
 	// constructor da superclasse
@@ -122,7 +118,7 @@ public class Os {
 	}
 	// hashCod somente do id
 
-	@Override
+//	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
@@ -130,7 +126,7 @@ public class Os {
 		return result;
 	}
 
-	@Override
+//	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;
