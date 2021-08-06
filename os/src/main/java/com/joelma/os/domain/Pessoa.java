@@ -1,9 +1,22 @@
 package com.joelma.os.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+import org.hibernate.validator.constraints.br.CPF;
+
+//#@Entity cria tabela no banco de dados
+
+@Entity(name= "db_pessoa")//renomeando de pessoa para db_pessoa
 public abstract class Pessoa {
 //criando os atributos
+	@Id//chave primaria
+	@GeneratedValue(strategy= GenerationType.IDENTITY)//banco de dados vai gerar o id automaticamente
 	private Integer id;
 	private String nome;
+	@CPF//valida cpf automaticamente
 	private String cpf;
 	private String telefone;
 
