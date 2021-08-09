@@ -1,11 +1,11 @@
-package org.generation.games.service;
+package org.generation.blogPessoal.service;
 import java.nio.charset.Charset;
 import java.util.Optional;
 
-import org.apache.tomcat.util.codec.binary.Base64;
-import org.generation.games.model.UserLogin;
-import org.generation.games.model.Usuario;
-import org.generation.games.repository.UsuarioRepository;
+import org.apache.commons.codec.binary.Base64;
+import org.generation.blogPessoal.model.UserLogin;
+import org.generation.blogPessoal.model.Usuario;
+import org.generation.blogPessoal.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -45,7 +45,5 @@ public class UsuarioService {
 			return null;
 		}
 }
-
-
 
 

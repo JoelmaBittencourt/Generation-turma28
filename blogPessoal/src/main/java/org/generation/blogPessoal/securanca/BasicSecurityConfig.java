@@ -1,5 +1,4 @@
-package org.generation.games.seguranca;
-
+package org.generation.blogPessoal.securanca;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

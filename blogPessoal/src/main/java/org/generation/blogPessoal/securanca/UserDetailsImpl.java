@@ -1,9 +1,9 @@
-package org.generation.games.seguranca;
+package org.generation.blogPessoal.securanca;
 
 import java.util.Collection;
 import java.util.List;
 
-import org.generation.games.model.Usuario;
+import org.generation.blogPessoal.model.Usuario;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -69,6 +69,3 @@ public class UserDetailsImpl implements UserDetails{
 	}
 
 }
-
-
-

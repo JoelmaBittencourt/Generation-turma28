@@ -1,4 +1,4 @@
-package org.generation.games.model;
+package org.generation.blogPessoal.model;
 
 import java.util.List;
 import javax.persistence.CascadeType;
@@ -43,7 +43,7 @@ public class Usuario {
 
 	@OneToMany(mappedBy = "usuario", cascade = CascadeType.REFRESH)
 	@JsonIgnoreProperties("usuario")
-	private List<Jogos> jogos;
+	private List<Postagem> postagem;
 
 	public long getId() {
 		return id;
@@ -93,12 +93,12 @@ public class Usuario {
 		this.tipo = tipo;
 	}
 
-	public List<Jogos> getJogos() {
-		return jogos;
+	public List<Postagem> getPostagem() {
+		return postagem;
 	}
 
-	public void setJogos(List<Jogos> jogos) {
-		this.jogos = jogos;
+	public void setPostagem(List<Postagem> postagem) {
+		this.postagem = postagem;
 	}
 	
 

@@ -1,5 +1,4 @@
-
-package org.generation.games.model;
+package org.generation.blogPessoal.model;
 
 public class UserLogin {
 	private long id;
