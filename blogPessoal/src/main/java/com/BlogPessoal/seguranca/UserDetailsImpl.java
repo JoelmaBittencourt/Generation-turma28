@@ -9,7 +9,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 
-public class UserDatailsImpl implements UserDetails {
+public class UserDetailsImpl implements UserDetails {
 
 	
 	private static final long serialVersionUID = 1L;
@@ -18,7 +18,7 @@ public class UserDatailsImpl implements UserDetails {
 	private String senha;
 	private List<GrantedAuthority> authorities;
 	
-	public UserDatailsImpl(Usuario usuario) {
+	public UserDetailsImpl(Usuario usuario) {
 		this.email = usuario.getEmail();
 		this.senha = usuario.getSenha();
 	}
