@@ -3,8 +3,11 @@ package com.joelma.os.domain;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.Entity;
+import javax.persistence.OneToMany;
+@Entity
 public class Tecnico extends Pessoa {
-
+@OneToMany(mappedBy = "tecnico")
 private List<Os> List=new ArrayList<>();
 	public Tecnico() {
 		super();

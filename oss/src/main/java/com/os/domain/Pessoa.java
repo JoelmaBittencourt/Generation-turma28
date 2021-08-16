@@ -1,32 +1,17 @@
-package com.joelma.os.domain;
+package com.os.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-
-import org.hibernate.validator.constraints.br.CPF;
-
-@Entity
 public abstract class Pessoa {
-//criando os atributos
 
-	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	private String nome;
-@CPF
+
 	private String cpf;
 	private String telefone;
-
+	
 	public Pessoa() {
 		super();
-
-		// criar constructor sem parametro alt+shift+s
-		// generate from superclass
-
-	}// criar constructor com parametro
+	
+	}
 
 	public Pessoa(Integer id, String nome, String cpf, String telefone) {
 		super();
@@ -34,7 +19,7 @@ public abstract class Pessoa {
 		this.nome = nome;
 		this.cpf = cpf;
 		this.telefone = telefone;
-	}// criar getter e setter
+	}
 
 	public Integer getId() {
 		return id;
@@ -68,17 +53,16 @@ public abstract class Pessoa {
 		this.telefone = telefone;
 	}
 
-//	@Override
+	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((cpf == null) ? 0 : cpf.hashCode());
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		return result;
-	}// criar hascode para comparar as instacias pelos valores e nao
-		// valores de memoria alt+shift+s=hashCod and equals
+	}
 
-
+	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;
@@ -100,4 +84,6 @@ public abstract class Pessoa {
 		return true;
 	}
 
+	
+	
 }
