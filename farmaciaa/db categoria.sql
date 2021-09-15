@@ -1,1 +1,0 @@
-SELECT * FROM farmaciaa.tb_categoria;
